@@ -7,6 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -70,11 +71,13 @@ public class MainActivity extends AppCompatActivity {
             // вызываем соответственный ему фрагмент
             switch (position) {
                 case 0:
-                    fragment = new EmailFragment();
+                    //fragment = new EmailFragment();
                     Toast.makeText(MainActivity.this, "Email", Toast.LENGTH_SHORT).show();
                     break;
                 case 1:
-                    fragment = new InfoFragment();
+                    //fragment = new InfoFragment();
+                    Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                    startActivity(intent);
                     break;
                 case 2:
                     fragment = new MapFragment();
